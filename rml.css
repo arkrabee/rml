@@ -1,0 +1,311 @@
+@font-face {
+    font-family: komika;
+    src: url("../fonts/f.ttf");
+}
+
+/* Make headings more enchanting */
+.navbar h1,.navbar h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif; /* Add a stylish font */
+    color: #2a9d8f; /* Soft green */
+    letter-spacing: 1px;
+}
+
+/* Adjust body font for readability */
+body {
+    font-family: komika;
+    line-height: 1.6;
+    color: #343a40;
+
+}
+
+
+/* Modernize buttons */
+.btn-primary {
+    background-color: #264653; /* Deep blue-green */
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #2a9d8f; /* Softer green on hover */
+    transform: scale(1.05);
+}
+
+
+/* Modern, translucent navbar */
+.navbar {
+    background-color: rgba(38, 70, 83, 0.9); /* Deep green with transparency */
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+    color: #000000;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #f4a261; /* Warm orange highlight */
+}
+
+
+/* Elevate cards with shadows and animations */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+
+/* Stylish footer */
+footer {
+    background-color: #264653;
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #f4a261;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #e76f51;
+    text-decoration: underline;
+}
+
+
+/* Fine-tune for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn-primary {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Fade-in animation for page load */
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply styles only to elements with the data-ripple attribute */
+[data-ripple] {
+    position: relative;
+    overflow: hidden; /* Prevent the ripple from overflowing the element */
+    display: inline-block;
+    cursor: pointer;
+    background-color: #ffffff; /* Add a background for better visibility */
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+[data-ripple]:hover {
+    background-color: #ffffff; /* Change background on hover */
+}
+
+/* Ripple effect styling */
+[data-ripple] .ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    background-color: rgba(255, 255, 255, 0.5); /* Light translucent ripple */
+}
+
+/* Animation keyframes */
+@keyframes ripple-animation {
+    to {
+        transform: scale(4); /* Expand the ripple */
+        opacity: 0; /* Fade out */
+    }
+}
+
+
+
+/* Default dropdown-item styling */
+.dropdown-item {
+    background-color: #ffffff; /* Deep green background */
+    color: #ffffff; /* White text for readability */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Change color on hover */
+.dropdown-item:hover {
+    background-color: #ffffff; /* Softer green when hovered */
+    color: #000000; /* Black text for better contrast */
+}
+
+/* Optional: Active state styling */
+.dropdown-item.active {
+    background-color: #e76f51; /* Highlight active item in orange */
+    color: #ffffff;
+}
+
+/* Optional: Focus state styling */
+.dropdown-item:focus {
+    outline: none;
+    background-color: #2a9d8f;
+    color: #000000;
+}
+.navbar * {
+    color: black
+}
+
+
+/* Container for all cards */
+.card-container {
+    display: flex;
+    flex-direction: row; /* Arrange cards vertically */
+    align-items: center; /* Center cards horizontally */
+    gap: 20px; /* Space between cards */
+    margin-top: 60vh; /* Start after the rectangle ends */
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Folder-like link card */
+.link-card {
+    position: relative;
+    width: 200px;
+    height: 120px;
+    padding: 1px;
+    background-color: #f4a261; /* Folder background color */
+    border: 2px solid #e76f51; /* Folder border */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.link-card p {
+    font-size: 30px;
+    font-weight: 100;
+    font-family: komika;
+    color: brown;
+}
+/* Card hover effect */
+.link-card:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+/* Tab of the folder */
+.card-tab {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    width: 80px;
+    height: 20px;
+    background-color: #e9c46a; /* Tab color */
+    border-radius: 4px 4px 0 0;
+    border: 2px solid #e76f51;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #264653;
+}
+
+/* Card body */
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    color: #264653;
+}
+
+
+/* Rectangle background */
+.rectangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50vh; /* Half the viewport height */
+    margin: 0 150px; /* Padding from the sides */
+    background-color: #572700; /* Background color */
+    border-radius: 30px; /* Rounded corners */
+    z-index: -1; /* Place it behind other content */
+}
+
+
+
+/* Default search bar hidden */
+.search-bar {
+    display: none;
+}
+
+/* Show search bar on mobile devices */
+@media (max-width: 768px) {
+    .search-bar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: #ffffff; /* Background color */
+        padding: 8px 12px;
+        border-radius: 20px; /* Rounded edges */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: calc(100% - 40px); /* Responsive width */
+        margin: 10px auto;
+    }
+    .search-bar svg {
+        width: 24px;
+        height: 24px;
+    }
+    .search-bar input {
+        border: none;
+        outline: none;
+        flex-grow: 1; /* Fills remaining space */
+        font-size: 16px;
+    }
+}
+
+
+
+
+img {
+    max-width: 100%; /* Scale down if the image exceeds the screen width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove inline gap for centered images */
+    margin: 0 auto; /* Center images horizontally */
+}
+
+/* Ensure padding/margin on smaller screens */
+@media (max-width: 768px) {
+    img {
+        width: 100%;/* Optional padding for better spacing */
+    }
+}

@@ -1,0 +1,31 @@
+/* Apply the background image to the entire body */
+body {
+    background-image: url(
+"https://www.solidbackgrounds.com/images/950x350/950x350-chrome-yellow-solid-color-background.jpg"
+    );
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-attachment: fixed; /* Keeps the image fixed during scrolling */
+    background-position: center; /* Centers the image */
+    color: #ffffff; /* Optional: Sets text color to white for better contrast */
+    font-family: 'Roboto', sans-serif; /* Sets a modern font */
+}
+
+/* Style for the navbar-brand */
+.navbar-brand {
+    color: #3b0c09; /* Deep red color */
+    font-weight: bold; /* Makes the text bolder */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Adds subtle shadow for emphasis */
+}
+
+/* Optional: Hover effect for navbar-brand */
+.navbar-brand:hover {
+    color: #a52a2a; /* Darker red when hovered */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+
+main {
+    padding: 10px;
+    padding-top: 20px;
+}
